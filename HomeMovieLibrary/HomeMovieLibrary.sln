@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2020
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GateWay", "..\GateWay\GateWay.csproj", "{638D52AC-01CC-4C70-B40E-5833EC5538C9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieAPI", "MovieAPI\MovieAPI.csproj", "{654E6712-8368-4C6B-B4E0-7B2FB5902F16}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GateWay", "GateWay\GateWay.csproj", "{C6953A68-DF36-4D20-BC06-8348E76028DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TVShowAPI", "TVShowAPI\TVShowAPI.csproj", "{68E58CE4-75CC-4EDE-A0DB-E7407BC26E08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PopularAPI", "PopularAPI\PopularAPI.csproj", "{448032C9-3C07-4673-AF05-3C79CB1BEAC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthAPI", "AuthAPI\AuthAPI.csproj", "{15DE91C9-D55C-46A8-8BE8-66B12D4F2066}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +19,26 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{638D52AC-01CC-4C70-B40E-5833EC5538C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{638D52AC-01CC-4C70-B40E-5833EC5538C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{638D52AC-01CC-4C70-B40E-5833EC5538C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{638D52AC-01CC-4C70-B40E-5833EC5538C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{654E6712-8368-4C6B-B4E0-7B2FB5902F16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{654E6712-8368-4C6B-B4E0-7B2FB5902F16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{654E6712-8368-4C6B-B4E0-7B2FB5902F16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{654E6712-8368-4C6B-B4E0-7B2FB5902F16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6953A68-DF36-4D20-BC06-8348E76028DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6953A68-DF36-4D20-BC06-8348E76028DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6953A68-DF36-4D20-BC06-8348E76028DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6953A68-DF36-4D20-BC06-8348E76028DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68E58CE4-75CC-4EDE-A0DB-E7407BC26E08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68E58CE4-75CC-4EDE-A0DB-E7407BC26E08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68E58CE4-75CC-4EDE-A0DB-E7407BC26E08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68E58CE4-75CC-4EDE-A0DB-E7407BC26E08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{448032C9-3C07-4673-AF05-3C79CB1BEAC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{448032C9-3C07-4673-AF05-3C79CB1BEAC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{448032C9-3C07-4673-AF05-3C79CB1BEAC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{448032C9-3C07-4673-AF05-3C79CB1BEAC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15DE91C9-D55C-46A8-8BE8-66B12D4F2066}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15DE91C9-D55C-46A8-8BE8-66B12D4F2066}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15DE91C9-D55C-46A8-8BE8-66B12D4F2066}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15DE91C9-D55C-46A8-8BE8-66B12D4F2066}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
