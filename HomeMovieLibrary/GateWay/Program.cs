@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore;
+﻿using System.IO;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace GateWay
 {
@@ -14,27 +8,27 @@ namespace GateWay
     {
         public static void Main(string[] args)
         {
-            //IWebHostBuilder builder = new WebHostBuilder();
 
-            //builder.ConfigureServices(s => {
-            //    s.AddSingleton(builder);
-            //});
+            IWebHostBuilder builder = new WebHostBuilder();
 
-            //builder.UseKestrel()
-            //    .UseContentRoot(Directory.GetCurrentDirectory())
-            //    .UseStartup<Startup>();
+            builder.ConfigureServices(s => {
+                s.AddSingleton(builder);
+            });
 
-            //var host = builder.Build();
+            builder.UseKestrel()
+                .UseContentRoot(Directory.GetCurrentDirectory())
+                .UseStartup<Startup>();
 
-            //host.Run();
+            var host = builder.Build();
 
-            BuildWebHost(args).Run();
+            host.Run();
         }
 
-        public static IWebHost BuildWebHost(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>()
-                .UseUrls("http://localhost:5000")
-                .Build();
+        //BuildWebHost(args).Run();
+        //public static IWebHost BuildWebHost(string[] args) =>
+        //    WebHost.CreateDefaultBuilder(args)
+        //        .UseStartup<Startup>()
+        //        .UseUrls("http://localhost:5000")
+        //        .Build();
     }
 }
