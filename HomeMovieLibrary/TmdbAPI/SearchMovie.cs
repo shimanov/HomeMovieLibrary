@@ -28,12 +28,14 @@ namespace TmdbAPI
                 .OfType<JProperty>()
                 .Where(p => p.Name == "title")
                 .Select(p => p.Value);
-            foreach (var j in jsnResult)
-            {
-                Console.WriteLine(j);
-            }
 
-            Console.ReadKey();
+
+            //foreach (var j in jsnResult)
+            //{
+            //    Console.WriteLine(j);
+            //}
+
+            //Console.ReadKey();
         }
     }
 }

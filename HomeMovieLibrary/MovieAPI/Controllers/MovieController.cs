@@ -4,25 +4,42 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using MovieAPI.Context;
+using MovieAPI.Models;
 
 namespace MovieAPI.Controllers
 {
     [Produces("application/json")]
     [Route("api/movie")]
+    [ResponseCache(Location = ResponseCacheLocation.Any, Duration = 300)]
     public class MovieController : Controller
     {
+        MovieContext movieContext;
+
+        public MovieController(MovieContext context)
+        {
+            movieContext = context;
+        }
+
         // GET api/movie
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<MovieModel> Get()
         {
-            return new string[] { "value1", "value2" };
+            return movieContext.Movies.ToList();
         }
 
         // GET api/movie/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet("{id}", Name ="GetMovie")]
+        public IActionResult Get(int id)
         {
-            return "value";
+            var result = movieContext.Movies.First(x => x.Id == id);
+            if (result == null)
+            {
+
+                //Реализовать поиск в api.themoviedb.org и сохранение в БД
+                return NotFound();
+            }
+            return new OkObjectResult(result);
         }
 
         // POST api/movie
